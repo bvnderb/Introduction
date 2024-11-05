@@ -11,7 +11,7 @@
 
 
 
-    <script>
+    <!-- <script>
 
         console.log("Hello World");
         alert("Hello World");
@@ -19,6 +19,32 @@
 
         let dateObject = new Date(); // LET <- schuif maken
         console.log(dateObject);
+
+
+
+    </script> -->
+
+    <script>
+        function testPerformance(){
+            const targetNumber = 10000000 // The larger the number, the longer it takes.
+            const startTime = performance.now()
+            // Simple loop to simulate workload
+            for (let i = 0; i < targetNumber; i++) {
+                // The loop does nothing except counting
+            }
+            const endTime = performance.now();
+            const elapsedTime = endTime - startTime;
+
+            // display the result
+            document.body.innerHTML = `
+            <h1>Performance Test Result</h1>
+            <p>counting to ${targetNumber} took <strong>${elapsedTime.toFixed(2)}</strong> milliseconds:`;
+                console.log(`Counting to ${targetNumber} took ${elapsedTime.toFixed(2)} milliseconds.`)
+        }
+
+        // Run the test
+        testperformance();
+
 
     </script>
 
